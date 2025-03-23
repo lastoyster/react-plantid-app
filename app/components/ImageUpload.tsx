@@ -3,12 +3,12 @@
 import { useState, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { ImageUploadProps } from "@/types/types";
-import { parsePlantInfo } from "@/libs/parseInfoText";
+import { parsePlantInfo } from "@/public/libs/parseInfoText";
 import toast from "react-hot-toast";
 import { Icons } from "./common/Icons";
 import { PROMPT } from "@/constants/prompt";
 import { MODEL } from "@/constants/model";
-import { fileToGenerativePart } from "@/libs/generateFileAI";
+import { fileToGenerativePart } from "@/public/libs/generateFileAI";
 
 const genAI = new GoogleGenerativeAI(
   process.env.NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY!
